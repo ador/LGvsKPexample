@@ -19,9 +19,16 @@ A csv file with tweets, that contains 4 columns:
 
 ## Hints
 
-#### How to transform source strings to a new column with factors
 
-At first, how to match patterns and get a boolean vector (using the "stringr" package):
+#### How to search in text
+
+*Basic way:* use the grep(pattern, text) or grepl(pattern, text) functions. For more help:
+```R
+> ?grep()
+```
+
+*Better way:* use functions from the <a href="http://cran.r-project.org/web/packages/stringr/stringr.pdf" stringr package</a>.
+To match a patterns in a whole vector/column at once and get a boolean vector:
 ```R
 > sttVec <- c("Hello my Little Pony", "hello again", "ttt", "my li")
 > str_detect(sttVec, ignore.case("hello"))
@@ -29,6 +36,10 @@ At first, how to match patterns and get a boolean vector (using the "stringr" pa
 > str_detect(sttVec, ignore.case("my LI"))
 [1]  TRUE FALSE FALSE  TRUE
 ```
+
+(<a href="http://gastonsanchez.com/Handling_and_Processing_Strings_in_R.pdf"> More help for string manipulations</a>)
+
+#### How to transform source strings to a new column with factors
 
 How to transform a vector of strings to factors:
 ```R
@@ -46,3 +57,5 @@ myDf$newColName <- myVectorWithValues
 counts <- table(tweetDf$sourceType)
 barplot(counts, main="Device distribution", xlab="Devices")
 ```
+
+#### How to find 
