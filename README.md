@@ -39,23 +39,38 @@ To match a patterns in a whole vector/column at once and get a boolean vector:
 
 (<a href="http://gastonsanchez.com/Handling_and_Processing_Strings_in_R.pdf"> More help for string manipulations</a>)
 
-#### How to transform source strings to a new column with factors
 
-How to transform a vector of strings to factors:
+#### How to transform a vector of strings to factors:
 ```R
 as.factor(myStringVec)
 ```
 
-How to add a new column with a name to a data frame:
+#### How to add a new column with a name to a data frame:
 ```R
 myDf$newColName <- myVectorWithValues
 ```
 
-#### How to create a simple bar plot from the sourceType column
-
+#### How to select only some columns of a data frame
 ```R
-counts <- table(tweetDf$sourceType)
-barplot(counts, main="Device distribution", xlab="Devices")
+smallerDf <- origDf[,c("columnName1", "colName2")]
 ```
 
-#### How to find 
+#### How to count number of TRUE values in a column
+```R
+sum(dataFrame$columnName)
+```
+
+#### How to do "group by" operations on a data frame
+
+The <a href="http://cran.r-project.org/web/packages/plyr/plyr.pdf"> plyr package </a> helps with this. 
+
+Some short tutorials: <a href="http://seananderson.ca/2013/12/01/plyr.html">first</a>, <a href="http://www.r-bloggers.com/a-fast-intro-to-plyr-for-r/"> second</a>.
+
+
+#### How to create a simple bar plots from a data frame
+
+Some nice examples can be found <a href="http://www.harding.edu/fmccown/r/#autosdatafile"> here </a>.
+
+
+
+
