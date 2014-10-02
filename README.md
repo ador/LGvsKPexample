@@ -14,6 +14,8 @@ A csv file with tweets, that contains 4 columns:
 - Add a new column to the data frame, called "sourceType" that contains factors of 4 levels, based on the original "source" column. The possible values should be "android", "apple", "web", and "other". Use string matching to decide which group a row belongs to.
 - Using the above, plot something like this (TODO):
 
+<img src="http://info.ilab.sztaki.hu/~aszabo/ea/LGvsKPBarPlot.pdf" alt="double bar plot" style="width:200px;height:200px"/>
+
 ## Hints
 
 #### How to transform source strings to a new column with factors
@@ -32,7 +34,7 @@ How to transform a vector of strings to factors:
 as.factor(myStringVec)
 ```
 
-How to add a new column to a data frame:
+How to add a new column with a name to a data frame:
 ```R
 myDf$newColName <- myVectorWithValues
 ```
