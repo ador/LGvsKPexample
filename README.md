@@ -12,9 +12,10 @@ A csv file with tweets, that contains 4 columns:
 
 ### Subtasks
 - Add a new column to the data frame, called "sourceType" that contains factors of 4 levels, based on the original "source" column. The possible values should be "android", "apple", "web", and "other". Use string matching to decide which group a row belongs to.
-- Using the above, plot something like this (TODO):
+- Using the above, plot something like this:
 
-<img src="http://info.ilab.sztaki.hu/~aszabo/ea/LGvsKPBarPlot.pdf" alt="double bar plot" style="width:200px;height:200px"/>
+![ExpectedPfd](images/LGvsKPDoubleBarPlot.png)
+
 
 ## Hints
 
