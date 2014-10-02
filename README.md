@@ -27,7 +27,7 @@ A csv file with tweets, that contains 4 columns:
 > ?grep()
 ```
 
-*Better way:* use functions from the <a href="http://cran.r-project.org/web/packages/stringr/stringr.pdf" stringr package</a>.
+*Better way:* use functions from the <a href="http://cran.r-project.org/web/packages/stringr/stringr.pdf"> stringr package</a>.
 To match a patterns in a whole vector/column at once and get a boolean vector:
 ```R
 > sttVec <- c("Hello my Little Pony", "hello again", "ttt", "my li")
